@@ -1,20 +1,19 @@
 const { mongoose, Schema } = require("mongoose");
 
-const transactionSchema = new Schema ({
-    category: {
-        type: String,
-        enum: ['food', 'shopping', 'bills', 'clothing', ]
-
-    },
-incomeTitle: String,
-amount: Number,
-createdAt: { type: Date, default: Date.now() },
-note: String,
-transactionType: {
+const transactionSchema = new Schema({
+  category: {
     type: String,
-    enum: ["income", "expense" ],
-},
-})
+    enum: [ "shopping", "bills", "clothing", "Transportatin", "Vechile", "Life & Entertaiment", "Communication, Pc", "Financial expenses", "Investments", "Income", "Others"],
+  },
+  incomeTitle: String,
+  amount: Number,
+  createdAt: { type: Date, default: Date.now() },
+  note: String,
+  transactionType: {
+    type: String,
+    enum: ["income", "expense"],
+  },
+});
 
 const transactionModel = mongoose.model("incomes", transactionSchema);
 
