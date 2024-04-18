@@ -3,7 +3,7 @@ const { mongoose, Schema } = require("mongoose");
 const transactionSchema = new Schema({
   category: {
     type: String,
-    enum: [ "Food & drinks","Shopping", "Bills", "Clothing", "Transportatin", "Vechile", "Life & Entertaiment", "Communication, Pc", "Financial expenses", "Investments", "Income", "Others"],
+    enum: [ "Food & Drinks","Shopping", "Bills", "Clothing", "Transportatin", "Vechile", "Life & Entertaiment", "Communication, Pc", "Financial expenses", "Investments", "Income", "Others"],
   },
   incomeTitle: String,
   amount: Number,
